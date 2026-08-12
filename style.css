@@ -1,0 +1,295 @@
+* {
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(0deg, rgb(216, 235, 227), grey);
+}
+
+
+/* ------------Header---------*/
+
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style:none;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    color: black;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+/*----sidebar--- */
+.sidebar{
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button{
+    display:none;
+}
+
+/* -------------Main----------*/
+
+section{
+    margin-left: 40px ;
+    margin-right: 40px;
+}
+
+section:not(:first-of-type){
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+#Hero {
+    height: 600px;
+    display: flex;
+    flex-direction: row-reverse ;
+    justify-content: space-evenly ;
+    align-items: center ;
+}
+
+#Hero h2 {
+    display:flex;
+    justify-content: center;
+}
+
+.h-image{
+    height: 300px;
+    width:250px;
+    box-shadow: 9px -9px 16px 0px rgba(0, 0, 0, 0.33);
+    border-radius: 45px;
+}
+
+h2{
+    padding-bottom: 6px;
+    padding-top: 10px;
+}
+
+h3{
+    padding-bottom: 5px;
+    padding-top: 12px;
+}
+
+p {
+    font-size: 17px;
+}
+
+#About div{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+#About p{
+    font-size: 18px;
+}
+
+#About img{
+    width:400px;
+    border-radius: 80px;
+    box-shadow: -10px 5px 15px 5px rgba(0, 0, 0, 0.20);
+}
+
+.skill-list ul {
+    list-style: none;
+    padding-top:25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#Projects h2 {
+    margin-bottom: 18px;
+}
+
+.my-projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 60px;
+}
+
+
+.my-projects img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+#Certificates {
+    text-align: center;
+}
+
+#Certificates h2, p, img{
+    margin-bottom: 15px;
+}
+/*-----footer------ */
+
+footer{
+    background-color: rgb(107, 110, 110);
+    border-top: 1px solid black;
+    padding-bottom: 1px;
+}
+
+.footer-title{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px
+}
+
+#Contact ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#Contact ul li {
+    margin: 0 15px 80px 15px;
+    font-size: 30px;
+}
+
+#Contact a {
+    text-decoration: none;
+    color:black;
+}
+
+#Contact ul li:hover {
+    transform: scale(1.3);
+}
+
+.Credits p{
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+
+
+@media(max-width: 840px) {
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    #About div{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:815px){
+    #Hero {
+        flex-direction: column;
+    }
+    
+    .my-projects {
+        align-content: space-between;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .my-projects figure {
+        margin-left: 25%;
+    }
+}
+
+@media(max-width:690px){
+    .skill-list ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Certificates img {
+        width: 300px
+    }
+}
+
+@media(max-width:600px){
+    .my-projects figure{
+        margin-left:10%;
+    }
+}
+
+@media(max-width:500px){
+    #About img{
+        width:260px;
+        border-radius: 40px;
+    }
+
+    .footer-title{
+        font-size:20px;
+    }
+    
+    #Contact ul li {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:420px){
+    #Projects img{
+        width: 180px
+    }
+}
+
+@media(max-width:380px){
+    .sidebar{
+        width:100%;
+    }
+
+
+    #Certificates img{
+        width: 230px;
+    }
+}
